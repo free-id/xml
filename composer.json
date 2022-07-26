@@ -4,7 +4,7 @@
     "keywords": [
         "free id",
         "vitkuz573",
-        "Vitaly Kuzyaev",
+        "free-id",
         "xml",
         "parser"
     ],
@@ -14,6 +14,7 @@
         {
             "name": "Vitaly Kuzyaev",
             "email": "vitkuz573@gmail.com",
+            "homepage": "https://vitkuz.ru",
             "role": "Developer"
         }
     ],
