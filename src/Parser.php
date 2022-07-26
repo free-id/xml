@@ -2,19 +2,37 @@
 
 declare(strict_types=1);
 
-namespace VendorName\Skeleton;
+namespace FreeId\Xml;
 
+use DOMDocument;
+use Vitkuz573\FreeId\Concerns\File;
+use Vitkuz573\FreeId\Contracts\File as FileContract;
 use FreeId\Core\Parser as BaseParser;
 
-class Parser extends BaseParser
+class Parser extends BaseParser implements FileContract
 {
-    public function __construct() {
-        // Constructor code ...
+    use File;
+
+    public function __construct(
+        string $path,
+        string $child_element,
+        string $attribute = 'id',
+        int $start_id = 1,
+    ) {
+        parent::__construct([], $start_id);
+        $this->path = $path;
+        $this->child_element = $child_element;
+        $this->attribute = $attribute;
     }
 
     public function find(): int
     {
-        // Parser code ...
+        $dom = new DOMDocument();
+        $dom->load($this->path);
+
+        foreach ($dom->getElementsByTagName($this->child_element) as $element) {
+            $this->data[] = (int) $element->getAttribute($this->attribute);
+        }
 
         return $this->enumerate();
     }

@@ -1,19 +1,19 @@
 {
     "name": "free-id/json",
-    "description": ":package_description for free-id/core package",
+    "description": "XML parser for free-id/core package",
     "keywords": [
         "free id",
-        ":author_username",
-        ":author_name",
-        ":package_slug",
+        "vitkuz573",
+        "Vitaly Kuzyaev",
+        "xml",
         "parser"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/free-id/xml",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Vitaly Kuzyaev",
+            "email": "vitkuz573@gmail.com",
             "role": "Developer"
         }
     ],
@@ -28,12 +28,12 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src"
+            "FreeId\\Xml\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests"
+            "FreeId\\Xml\\Tests\\": "tests"
         }
     },
     "scripts": {
