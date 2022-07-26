@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace FreeId\Xml;
 
 use DOMDocument;
-use Vitkuz573\FreeId\Concerns\File;
-use Vitkuz573\FreeId\Contracts\File as FileContract;
+use FreeId\Core\Concerns\File;
+use FreeId\Core\Contracts\File as FileContract;
 use FreeId\Core\Parser as BaseParser;
 
 class Parser extends BaseParser implements FileContract
