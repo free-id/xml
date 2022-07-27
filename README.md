@@ -21,6 +21,15 @@ $parser = new Parser();
 echo $parser->find();
 ```
 
+## Parameters
+
+| Parameter              | Description                                     | Default |
+|------------------------|-------------------------------------------------|---------|
+| path (string)          | Path to the file to be searched                 | -       |
+| child_element (string) | The child element to be searched for            | -       |
+| attribute (string)     | Attribute by which the search will be performed | id      |
+| start_id (int)         | Identifier from which the search will start     | 1       |
+
 ## Testing
 
 ```bash
